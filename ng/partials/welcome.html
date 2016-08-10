@@ -1,0 +1,109 @@
+<div class="row">
+	<div class="jumbotron">
+		<h1>Welcome!</h1>
+		<a ui-sref="pouch" class="btn btn-info">Go To Pouch App</a>
+	</div>
+	<br >
+	<h3><a class="btn btn-info" ng-click="task1 = !task1">Toggle Task</a> Character Finder</h3>
+	<form class="form-horizontal" ng-show="task1">
+	  <div class="form-group">
+	    <label for="inputEmail3" class="col-sm-2 control-label">String1</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" ng-model="input1" placeholder="String 1" ng-change="find_chars()">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label for="inputPassword3" class="col-sm-2 control-label">String2</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" ng-model="input2" placeholder="String 2" ng-change="find_chars()">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="col-sm-2 control-label"></label>
+	    <div class="col-sm-10">
+	      <h1><small>Result:</small> {{resultStr}}</h1>
+	    </div>
+	  </div>
+	</form>
+</div>
+<br>
+<div class="row">
+	<h3><a class="btn btn-info" ng-click="task2 = !task2">Toggle Task</a> Array Compaction</h3>
+	<form class="form-horizontal" ng-show="task2">
+	  <div class="form-group">
+	    <label for="inputEmail3" class="col-sm-2 control-label">Array</label>
+	    <div class="col-sm-10">
+	    	<big>[</big>
+	      <textarea class="form-control" ng-model="array1" placeholder="Array (separated by commas, e.g. 1,2,,3,4,5)"></textarea>
+	      <big>]</big>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-10">
+	      <a class="btn btn-success" ng-click="compact_array()">Compact Array</a>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="col-sm-2 control-label"></label>
+	    <div class="col-sm-10">
+	      <h1><small>Result:</small> {{resultArray}}</h1>
+	    </div>
+	  </div>
+	</form>
+</div>
+<br>
+<div class="row">
+	<h3><a class="btn btn-info" ng-click="task3 = !task3">Toggle Task</a> Rotating an Array</h3>
+	<form class="form-horizontal" ng-show="task3">
+	  <div class="form-group">
+	    <label for="inputEmail3" class="col-sm-2 control-label">Array</label>
+	    <div class="col-sm-10">
+	    	<big>[</big>
+	      <textarea class="form-control" ng-model="flip_array" placeholder="Array 1 (separated by commas, e.g. 1,2,,3,4,5)"></textarea>
+	      <big>]</big>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label for="inputEmail3" class="col-sm-2 control-label">Position</label>
+	    <div class="col-sm-10">
+	      <input type="number" class="form-control" ng-model="flip_position" placeholder="Rotation Position in number, e.g. 2">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-10">
+	      <a class="btn btn-success" ng-click="reverse_array()">Rotate Array</a>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="col-sm-2 control-label"></label>
+	    <div class="col-sm-10">
+	      <h1><small>Result:</small> {{resultArrayFlip}}</h1>
+	    </div>
+	  </div>
+	</form>
+</div>
+<br>
+<div class="row">
+	<h3><a class="btn btn-info" ng-click="task4 = !task4">Toggle Task</a> LCM Calculator</h3>
+	<form class="form-horizontal" ng-show="task4">
+	  <div class="form-group">
+	    <label for="inputEmail3" class="col-sm-2 control-label">Integers</label>
+	    <div class="col-sm-10">
+	    	<big>[</big>
+	      <textarea class="form-control" ng-model="lcm_array" placeholder="Array of Integers (separated by commas, e.g. 1,2,,3,4,5)"></textarea>
+	      <big>]</big>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="col-sm-2 control-label"></label>
+	    <div class="col-sm-10">
+	      <h1><small>Result:</small> {{lcm_result}}</h1>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-10">
+	      <a class="btn btn-success" ng-click="calc_lcm()">Calculate CM</a>
+	    </div>
+	  </div>
+	</form>
+</div>
